@@ -40,7 +40,7 @@ function checksTodoExists(request, response, next) {
   const { username } = request.headers;
 
   if (!validate(id)) {
-    return response.status(400).json({ error: `Id ins't valid uuid` });
+    return response.status(400).json({ error: `Id ins't a valid uuid` });
   }
 
   const user = users.find((user) => user.username === username);
